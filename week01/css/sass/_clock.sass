@@ -1,0 +1,58 @@
+.clock
+    width: 432px
+    height: 432px
+    border-radius: 50%
+    +flex
+    position: relative
+    &-full
+        display: flex
+        max-width: 528px
+        margin: 0 auto
+        margin-top: 20px
+        flex: 1
+    &-start
+        width: 15px
+        height: 60px
+        border-radius: 15px
+        background-color: #80CBC4
+        position: absolute
+        top: -20px
+        left: 50%
+        transform: translateX(-50%)
+    &-innerCircle
+        width: 394px
+        height: 394px
+        border-radius: 50%
+        border: 3px solid #80CBC4
+
+.time
+    position: absolute
+    font-size: px(74)
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 100%
+    text-align: center
+    font-family: Lato, Arial, sans-serif
+    font-weight: 700
+    color: #4F9A94
+
+.timeline
+    display: flex
+    flex-direction: column
+    margin-top: 35px
+    &-circle
+        width: 28px
+        height: 28px
+        border-radius: 50%
+        background-color: #E0E0E0
+        position: relative
+        overflow: hidden
+        margin: 5px 0
+        &__ing
+            position: absolute
+            width: 100%
+            background-color: #80CBC4
+            top: 0
+            left: 0
+            height: 0%

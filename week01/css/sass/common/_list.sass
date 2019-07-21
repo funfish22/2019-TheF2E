@@ -1,0 +1,26 @@
+.list
+    // max-height: 170px
+    // overflow-y: auto
+    padding-right: 10px
+    overflow: hidden
+    overflow-y: auto
+    &::-webkit-scrollbar
+        width: 5px
+    &::-webkit-scrollbar-track
+        background-color: #F2F2F2
+        border-radius: 7px
+    &::-webkit-scrollbar-thumb
+        background-color: #C2C2C2
+    &-item
+        display: flex
+        align-items: center
+        padding: 12.5px 0
+        border-bottom: 2px solid #D6D6D6
+        &:first-of-type
+            padding-top: 0
+        // &:last-of-type
+        //     padding-bottom: 0
+        &__p
+            margin-left: 6px
+            margin-right: 4px
+            font-weight: 400

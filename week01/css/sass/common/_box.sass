@@ -1,0 +1,57 @@
+.box
+    width: 430px
+    &-group
+        &--ing
+            .box
+                max-height: 315px
+                height: 315px
+            .list
+                max-height: 287.5px
+        &--done
+            .box
+                &-header
+                    background-color: #E0E0E0
+                &-content
+                    max-height: 210px
+                    height: 210px
+            .circlDone
+                border-color: #C2C2C2
+                position: relative
+                &:after
+                    content: '✔'
+                    position: absolute
+                    color: #C2C2C2
+                    font-size: px(12)
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    font-weight: bold
+            .list
+                max-height: 182.5px
+                &-item
+                    &__p
+                        color: #C2C2C2
+    &-header
+        background-color: #92F2E9
+        padding: 8px 25px
+        display: flex
+        align-items: center
+    &-content
+        padding: 14px 15px 14px 25px
+        max-height: 315px
+        height: 315px
+    &__title
+        font-size: px(24)
+        font-weight: 500
+    &-icon
+        margin-left: auto
+        display: flex
+        align-items: center
+    .icon
+        cursor: pointer
+        margin: 0 7px
+        &:first-of-type
+            margin-left: 0
+        &:last-of-type
+            margin-right: 0
+

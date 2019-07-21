@@ -1,0 +1,115 @@
+$browser-default-font-size: 16 !default
+// \:root
+//     font-size: calc(0.5vw + 0.5vh + .15vmin)
+body
+    // animation: opacity_in 1s both
+    // overflow-x: hidden
+    font-family: 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', Arial, sans-serif
+    // width: 100vw
+    // opacity: 0
+    // font: .5rem 'Century Gothic Bold', '微軟正黑體', 'Microsoft JhengHei', Arial, sans-serif
+    line-height: 1.5
+// html
+//     font-size: $browser-default-font-size
+
+$primary: #0075c1
+
+$ms: '微軟正黑體', 'Microsoft JhengHei', Arial, sans-serif
+
+$cm: 'Century Gothic', '微軟正黑體', 'Microsoft JhengHei', Arial, sans-serif
+$cmb: 'Century Gothic Bold', '微軟正黑體', 'Microsoft JhengHei', Arial, sans-serif
+
+$fm: 'Futura-Medium', '微軟正黑體', 'Microsoft JhengHei', Arial, sans-serif
+$fb: 'Futura-Book', '微軟正黑體', 'Microsoft JhengHei', Arial, sans-serif
+$mp: 'Myriad Pro', '微軟正黑體', 'Microsoft JhengHei', Arial, sans-serif
+$mpb: 'Myriad Pro Bold', '微軟正黑體', 'Microsoft JhengHei', Arial, sans-serif
+$mpsb: 'Myriad Pro Semibold','Microsoft JhengHei',sans-serif;
+$mpbs: 'Myriad Pro BoldSemiCn','Microsoft JhengHei',sans-serif;
+
+
+@function px($px)  //rem可以改成你想使用的名稱
+    @return $px / $browser-default-font-size * 1rem
+
+
+@mixin fixed($l:auto,$r:auto,$z:1)
+    position: fixed
+    top: 0
+    left: $l
+    right: $r
+    z-index: $z
+
+@mixin flex($dis:flex,$jc:center,$ai:center)
+    display: $dis
+    justify-content: $jc
+    align-items: $ai
+
+@mixin rwdw($max)
+    @media only screen and (max-width: $max + px)  
+        @content
+
+@mixin rwdmw($min)
+    @media only screen and (min-width: $min + px)  
+        @content
+
+@mixin rwdh($max)
+    @media only screen and (max-height: $max + px)  
+        @content
+
+@mixin pseudo($w:100px,$h:100px)
+    content: ''
+    width: $w
+    height: $h
+    display: inline-block
+
+@mixin fshm($fm:$Ffmc,$fs:rem(14),$lh:px(20),$mb:0)
+    font-family: $fm
+    font-size: $fs
+    line-height: $lh
+    margin: $mb
+
+/* display: flex 置中*/
+@mixin flex-center 
+    display: flex
+    justify-content: center
+    align-items: center
+/* display: flex 置中*/
+
+/* position 置中 */
+@mixin position-center
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+@mixin txt-over($line: 2)
+    overflow: hidden
+    text-overflow: ellipsis
+    display: -webkit-box
+    -webkit-line-clamp: $line
+    -webkit-box-orient: vertical
+    word-break: break-word
+
+@mixin bg-cover
+    background-size: cover
+    background-position: center center
+
+
+.pos-r
+    position: relative
+
+.text-center
+    text-align: center
+
+.text-white
+    color: #fff
+
+.ml-auto
+    margin-left: auto
+
+.mx-auto
+    margin-left: auto
+    margin-right: auto
+
+.border-20
+    border-radius: 20px
+    overflow: hidden
