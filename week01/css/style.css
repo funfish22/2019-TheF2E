@@ -233,7 +233,7 @@ body {
     max-width: 528px;
     margin: 0 auto;
     margin-top: 20px;
-    flex: 1; }
+    width: 100%; }
   .clock-start {
     width: 15px;
     height: 60px;
