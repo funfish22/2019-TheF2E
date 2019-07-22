@@ -107,23 +107,149 @@
           </div>
         </div>
       </div>
+      <div class="box shadow-3 border-20" style="display: none">
+        <div class="box-group box-group--media">
+          <div class="box-header"></div>
+          <div class="box-content">
+            <div class="switch">
+              <p class="switch__title">鬧鐘提醒</p>
+              <div class="switch__control"></div>
+            </div>
+            <div class="radio">
+              <form class="radio-group">
+                <p class="radio-group__title">工作結束鬧鐘</p>
+                <label class="radio-label">
+                  <input class="radio__input" type="radio" name="work"/><span class="radio__select"></span><span class="radio__p">NONE</span>
+                </label>
+                <label class="radio-label">
+                  <input class="radio__input" type="radio" name="work"/><span class="radio__select"></span><span class="radio__p">BEEP</span>
+                </label>
+                <label class="radio-label">
+                  <input class="radio__input" type="radio" name="work"/><span class="radio__select"></span><span class="radio__p">DEFAULT</span>
+                </label>
+                <label class="radio-label">
+                  <input class="radio__input" type="radio" name="work"/><span class="radio__select"></span><span class="radio__p">ALERT</span>
+                </label>
+                <label class="radio-label">
+                  <input class="radio__input" type="radio" name="work"/><span class="radio__select"></span><span class="radio__p">WARNING</span>
+                </label>
+                <label class="radio-label">
+                  <input class="radio__input" type="radio" name="work"/><span class="radio__select"></span><span class="radio__p">DIGITAL</span>
+                </label>
+                <label class="radio-label">
+                  <input class="radio__input" type="radio" name="work"/><span class="radio__select"></span><span class="radio__p">BIRD</span>
+                </label>
+                <label class="radio-label">
+                  <input class="radio__input" type="radio" name="work" checked="checked"/><span class="radio__select"></span><span class="radio__p">ALARM</span>
+                </label>
+                <label class="radio-label">
+                  <input class="radio__input" type="radio" name="work"/><span class="radio__select"></span><span class="radio__p">MUSIC</span>
+                </label>
+                <label class="radio-label">
+                  <input class="radio__input" type="radio" name="work"/><span class="radio__select"></span><span class="radio__p">DROP</span>
+                </label>
+                <label class="radio-label">
+                  <input class="radio__input" type="radio" name="work"/><span class="radio__select"></span><span class="radio__p">BELL</span>
+                </label>
+                <label class="radio-label">
+                  <input class="radio__input" type="radio" name="work"/><span class="radio__select"></span><span class="radio__p">HORN</span>
+                </label>
+              </form>
+            </div>
+            <div class="radio">
+              <form class="radio-group">
+                <p class="radio-group__title">休息結束鬧鐘</p>
+                <label class="radio-label">
+                  <input class="radio__input" type="radio" name="end"/><span class="radio__select"></span><span class="radio__p">NONE</span>
+                </label>
+                <label class="radio-label">
+                  <input class="radio__input" type="radio" name="end"/><span class="radio__select"></span><span class="radio__p">BEEP</span>
+                </label>
+                <label class="radio-label">
+                  <input class="radio__input" type="radio" name="end" checked="checked"/><span class="radio__select"></span><span class="radio__p">DEFAULT</span>
+                </label>
+                <label class="radio-label">
+                  <input class="radio__input" type="radio" name="end"/><span class="radio__select"></span><span class="radio__p">ALERT</span>
+                </label>
+                <label class="radio-label">
+                  <input class="radio__input" type="radio" name="end"/><span class="radio__select"></span><span class="radio__p">WARNING</span>
+                </label>
+                <label class="radio-label">
+                  <input class="radio__input" type="radio" name="end"/><span class="radio__select"></span><span class="radio__p">DIGITAL</span>
+                </label>
+                <label class="radio-label">
+                  <input class="radio__input" type="radio" name="end"/><span class="radio__select"></span><span class="radio__p">BIRD</span>
+                </label>
+                <label class="radio-label">
+                  <input class="radio__input" type="radio" name="end"/><span class="radio__select"></span><span class="radio__p">ALARM</span>
+                </label>
+                <label class="radio-label">
+                  <input class="radio__input" type="radio" name="end"/><span class="radio__select"></span><span class="radio__p">MUSIC</span>
+                </label>
+                <label class="radio-label">
+                  <input class="radio__input" type="radio" name="end"/><span class="radio__select"></span><span class="radio__p">DROP</span>
+                </label>
+                <label class="radio-label">
+                  <input class="radio__input" type="radio" name="end"/><span class="radio__select"></span><span class="radio__p">BELL</span>
+                </label>
+                <label class="radio-label">
+                  <input class="radio__input" type="radio" name="end"/><span class="radio__select"></span><span class="radio__p">HORN</span>
+                </label>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box shadow-3 border-20" style="display: none">
+        <div class="box-group box-group--media">
+          <div class="box-header"></div>
+          <div class="box-content"></div>
+        </div>
+      </div>
       <div class="clock-full">
         <div class="clock-main">
           <div class="clock shadow-3">
             <div class="clock-start"></div>
             <div class="clock-innerCircle"></div>
             <p class="time">12：30</p>
+            <svg class="clock-bar" id="svg" width="432" height="432">
+              <circle class="clock-bar__circle" r="196" cx="216" cy="216" fill="transparent" stroke-width="40"></circle>
+            </svg>
           </div>
           <div class="control">
             <div class="control-icon"><span class="icon"><img src="./svg/stopClock.svg" alt=""/></span><span class="icon"><img src="./svg/playClock.svg" alt=""/></span><span class="icon"><img src="./svg/next.svg" alt=""/></span></div>
           </div>
         </div>
-        <div class="timeline ml-auto">
+        <div class="timeline ml-auto mt-3_5 flex-column">
           <div class="timeline-circle"><span class="timeline-circle__ing" style="height: 100%"></span></div>
           <div class="timeline-circle"><span class="timeline-circle__ing" style="height: 100%"></span></div>
           <div class="timeline-circle"><span class="timeline-circle__ing" style="height: 100%"></span></div>
           <div class="timeline-circle"><span class="timeline-circle__ing" style="height: 50%"></span></div>
           <div class="timeline-circle"><span class="timeline-circle__ing" style="height: 0%"></span></div>
+        </div>
+      </div>
+      <div class="lb">
+        <div class="lb-close"></div>
+        <div class="box shadow-3 border-20">
+          <div class="box-header">
+            <p class="box__title">新增任務</p>
+          </div>
+          <div class="box-content">
+            <label class="lbInner">
+              <p class="lbInner__title">任務名稱</p>
+              <input class="lbInner__input" type="text" value="整理入學資料"/>
+            </label>
+            <div class="lbInner">
+              <p class="lbInner__title">番茄數</p>
+              <div class="timeline timeline-add ml-auto">
+                <div class="timeline-circle timeline-circle--active"></div>
+                <div class="timeline-circle timeline-circle--active"></div>
+                <div class="timeline-circle"></div>
+                <div class="timeline-circle"></div>
+                <div class="timeline-circle"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>

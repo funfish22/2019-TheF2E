@@ -60,7 +60,7 @@ main {
   display: block; }
 
 body {
-  font-family: 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', Arial, sans-serif;
+  font-family: 'Lato', 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', Arial, sans-serif;
   line-height: 1.5; }
 
 /* display: flex 置中*/
@@ -75,12 +75,18 @@ body {
 .text-white {
   color: #fff; }
 
+.flex-column {
+  flex-direction: column; }
+
 .ml-auto {
   margin-left: auto; }
 
 .mx-auto {
   margin-left: auto;
   margin-right: auto; }
+
+.mt-3_5 {
+  margin-top: 35px; }
 
 .border-20 {
   border-radius: 20px;
@@ -91,6 +97,9 @@ body {
   .box-group--ing .box {
     max-height: 315px;
     height: 315px; }
+    .box-group--ing .box-content {
+      max-height: 315px;
+      height: 315px; }
   .box-group--ing .list {
     max-height: 287.5px; }
   .box-group--done .box-header {
@@ -118,11 +127,11 @@ body {
     background-color: #92F2E9;
     padding: 8px 25px;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    min-height: 52px; }
   .box-content {
     padding: 14px 15px 14px 25px;
-    max-height: 315px;
-    height: 315px; }
+    background-color: #fff; }
   .box__title {
     font-size: 1.5rem;
     font-weight: 500; }
@@ -182,6 +191,75 @@ body {
   .circleLi-item--active {
     background-color: #FF8F00; }
 
+.switch__title {
+  font-size: 1.5rem;
+  font-weight: 500; }
+
+.radio {
+  margin-top: 38px;
+  margin-bottom: 38px; }
+  .radio-group {
+    display: flex;
+    flex-wrap: wrap; }
+    .radio-group__title {
+      font-size: 1.5rem;
+      font-weight: 500;
+      width: 100%;
+      margin-bottom: 11px; }
+  .radio-label {
+    padding-left: 26px;
+    position: relative;
+    width: 33.33333%;
+    margin: 6px 0; }
+  .radio__input {
+    position: absolute;
+    opacity: 0; }
+    .radio__input[type=radio]:checked + .radio__select {
+      background-color: #80CBC4;
+      border: 0; }
+  .radio__select {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+    border: 3px solid #D6D6D6;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%); }
+
+.lb {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none; }
+  .lb .lb-close {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6); }
+  .lb .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .lbInner__title {
+    display: inline-block;
+    color: #8D8D8D;
+    font-weight: 400;
+    margin-bottom: 6px; }
+  .lbInner__input {
+    width: 100%;
+    font-size: 1.125rem;
+    padding-bottom: 5.5px;
+    outline: none;
+    border: 0;
+    border-bottom: 2px solid #D6D6D6;
+    font-family: 'Lato', 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', Arial, sans-serif; }
+
 .navbar {
   width: 90px;
   height: 100vh;
@@ -218,7 +296,8 @@ body {
   margin-left: 160px;
   margin-right: 100px;
   margin-top: 60px;
-  display: flex; }
+  display: flex;
+  align-items: flex-start; }
 
 .clock {
   width: 432px;
@@ -227,7 +306,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; }
+  position: relative;
+  background-color: #fff; }
   .clock-full {
     display: flex;
     max-width: 528px;
@@ -248,6 +328,17 @@ body {
     height: 394px;
     border-radius: 50%;
     border: 3px solid #80CBC4; }
+  .clock-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg); }
+    .clock-bar__circle {
+      stroke-dasharray: 1231.468;
+      stroke-dashoffset: 615.734;
+      stroke: rgba(128, 203, 196, 0.6); }
 
 .time {
   position: absolute;
@@ -257,14 +348,11 @@ body {
   transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
-  font-family: Lato, Arial, sans-serif;
   font-weight: 700;
   color: #4F9A94; }
 
 .timeline {
-  display: flex;
-  flex-direction: column;
-  margin-top: 35px; }
+  display: flex; }
   .timeline-circle {
     width: 28px;
     height: 28px;
@@ -272,7 +360,7 @@ body {
     background-color: #E0E0E0;
     position: relative;
     overflow: hidden;
-    margin: 5px 0; }
+    margin: 5px 4px; }
     .timeline-circle__ing {
       position: absolute;
       width: 100%;
@@ -280,6 +368,12 @@ body {
       top: 0;
       left: 0;
       height: 0%; }
+  .timeline-add .timeline-circle {
+    border: 3px solid #D6D6D6;
+    background-color: transparent; }
+    .timeline-add .timeline-circle--active {
+      border: 0;
+      background-color: #80CBC4; }
 
 .control {
   width: 340px;

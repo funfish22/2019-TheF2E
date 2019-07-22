@@ -1,0 +1,40 @@
+.switch
+    &__title
+        font-size: px(24)
+        font-weight: 500
+
+.radio
+    margin-top: 38px
+    margin-bottom: 38px
+    &-group
+        display: flex
+        flex-wrap: wrap
+        &__title
+            font-size: px(24)
+            font-weight: 500
+            width: 100%
+            margin-bottom: 11px
+    &-label
+        padding-left: 26px
+        position: relative
+        width: 33.33333%
+        margin: 6px 0
+        // display: flex
+        // align-items: center
+    &__input
+        position: absolute
+        opacity: 0
+        &[type=radio]:checked + .radio__select
+            background-color: #80CBC4
+            border: 0
+    &__select
+        width: 20px
+        height: 20px
+        display: inline-block
+        vertical-align: middle
+        border-radius: 50%
+        border: 3px solid #D6D6D6
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)

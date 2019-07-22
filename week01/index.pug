@@ -106,12 +106,130 @@ html(lang="en")
                             li.list-item
                                 .circlDone
                                 p.list-item__p 把講座心得整理成一篇文章
+            
+            .box.shadow-3.border-20(style="display: none")
+                .box-group.box-group--media
+                    .box-header
+                    .box-content
+                        .switch
+                            p.switch__title 鬧鐘提醒
+                            .switch__control
+                        .radio
+                            form.radio-group
+                                p.radio-group__title 工作結束鬧鐘
+                                label.radio-label
+                                    input.radio__input(type="radio" name="work")
+                                    span.radio__select
+                                    span.radio__p NONE
+                                label.radio-label
+                                    input.radio__input(type="radio" name="work")
+                                    span.radio__select
+                                    span.radio__p BEEP
+                                label.radio-label
+                                    input.radio__input(type="radio" name="work")
+                                    span.radio__select
+                                    span.radio__p DEFAULT
+                                label.radio-label
+                                    input.radio__input(type="radio" name="work")
+                                    span.radio__select
+                                    span.radio__p ALERT
+                                label.radio-label
+                                    input.radio__input(type="radio" name="work")
+                                    span.radio__select
+                                    span.radio__p WARNING
+                                label.radio-label
+                                    input.radio__input(type="radio" name="work")
+                                    span.radio__select
+                                    span.radio__p DIGITAL
+                                label.radio-label
+                                    input.radio__input(type="radio" name="work")
+                                    span.radio__select
+                                    span.radio__p BIRD
+                                label.radio-label
+                                    input.radio__input(type="radio" name="work" checked)
+                                    span.radio__select
+                                    span.radio__p ALARM
+                                label.radio-label
+                                    input.radio__input(type="radio" name="work")
+                                    span.radio__select
+                                    span.radio__p MUSIC
+                                label.radio-label
+                                    input.radio__input(type="radio" name="work")
+                                    span.radio__select
+                                    span.radio__p DROP
+                                label.radio-label
+                                    input.radio__input(type="radio" name="work")
+                                    span.radio__select
+                                    span.radio__p BELL
+                                label.radio-label
+                                    input.radio__input(type="radio" name="work")
+                                    span.radio__select
+                                    span.radio__p HORN
+                        .radio
+                            form.radio-group
+                                p.radio-group__title 休息結束鬧鐘
+                                label.radio-label
+                                    input.radio__input(type="radio" name="end")
+                                    span.radio__select
+                                    span.radio__p NONE
+                                label.radio-label
+                                    input.radio__input(type="radio" name="end")
+                                    span.radio__select
+                                    span.radio__p BEEP
+                                label.radio-label
+                                    input.radio__input(type="radio" name="end" checked)
+                                    span.radio__select
+                                    span.radio__p DEFAULT
+                                label.radio-label
+                                    input.radio__input(type="radio" name="end")
+                                    span.radio__select
+                                    span.radio__p ALERT
+                                label.radio-label
+                                    input.radio__input(type="radio" name="end")
+                                    span.radio__select
+                                    span.radio__p WARNING
+                                label.radio-label
+                                    input.radio__input(type="radio" name="end")
+                                    span.radio__select
+                                    span.radio__p DIGITAL
+                                label.radio-label
+                                    input.radio__input(type="radio" name="end")
+                                    span.radio__select
+                                    span.radio__p BIRD
+                                label.radio-label
+                                    input.radio__input(type="radio" name="end")
+                                    span.radio__select
+                                    span.radio__p ALARM
+                                label.radio-label
+                                    input.radio__input(type="radio" name="end")
+                                    span.radio__select
+                                    span.radio__p MUSIC
+                                label.radio-label
+                                    input.radio__input(type="radio" name="end")
+                                    span.radio__select
+                                    span.radio__p DROP
+                                label.radio-label
+                                    input.radio__input(type="radio" name="end")
+                                    span.radio__select
+                                    span.radio__p BELL
+                                label.radio-label
+                                    input.radio__input(type="radio" name="end")
+                                    span.radio__select
+                                    span.radio__p HORN
+            
+            .box.shadow-3.border-20(style="display: none")
+                .box-group.box-group--media
+                    .box-header
+                    .box-content
+            
             .clock-full
                 .clock-main
                     .clock.shadow-3
                         .clock-start
                         .clock-innerCircle
                         p.time 12：30
+                        svg#svg.clock-bar(width="432" height="432")
+                            circle.clock-bar__circle(r="196" cx="216" cy="216" fill="transparent" stroke-width="40")
                     .control
                         .control-icon
                             span.icon
@@ -120,7 +238,7 @@ html(lang="en")
                                 img(src="./svg/playClock.svg", alt="")
                             span.icon
                                 img(src="./svg/next.svg", alt="")
-                .timeline.ml-auto
+                .timeline.ml-auto.mt-3_5.flex-column
                     .timeline-circle
                         span.timeline-circle__ing(style="height: 100%")
                     .timeline-circle
@@ -132,3 +250,20 @@ html(lang="en")
                     .timeline-circle
                         span.timeline-circle__ing(style="height: 0%")
 
+            .lb
+                .lb-close
+                .box.shadow-3.border-20
+                    .box-header
+                        p.box__title 新增任務
+                    .box-content
+                        label.lbInner
+                            p.lbInner__title 任務名稱
+                            input.lbInner__input(type="text" value="整理入學資料")
+                        .lbInner
+                            p.lbInner__title 番茄數
+                            .timeline.timeline-add.ml-auto
+                                .timeline-circle.timeline-circle--active
+                                .timeline-circle.timeline-circle--active
+                                .timeline-circle
+                                .timeline-circle
+                                .timeline-circle
